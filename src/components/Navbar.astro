@@ -1,0 +1,27 @@
+---
+import { FaTwitterSquare, FaLinkedin, FaHome } from 'react-icons/fa';
+
+const classes = {
+  link: 'text-black dark:text-white',
+};
+---
+
+<header class="bg-base-100 drop-shadow-md py-4">
+  <nav class="flex justify-between items-center container mx-auto">
+    <div class="flex items-center">
+      <a class="text-black dark:text-white" href="/"> Portfolio</a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <a class={classes.link} href="https://jesusbossa.dev" target="_blank" rel="noreferrer">
+        <FaHome />
+      </a>
+      <a class={classes.link} href="https://www.linkedin.com/in/makinox" target="_blank" rel="noreferrer">
+        <FaTwitterSquare />
+      </a>
+      <a class={classes.link} href="https://twitter.com/jesMakinox" target="_blank" rel="noreferrer">
+        <FaLinkedin />
+      </a>
+    </div>
+  </nav>
+</header>
