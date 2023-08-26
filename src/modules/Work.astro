@@ -1,6 +1,6 @@
 ---
+import Link from '@/components/Link.astro';
 import workData from '@/data/work';
-import { FaChevronRight } from 'react-icons/fa';
 ---
 
 <section class="container mx-auto mt-80">
@@ -18,10 +18,7 @@ import { FaChevronRight } from 'react-icons/fa';
             <h3 class="text-2xl text-center font-semibold my-2">{element.place}</h3>
             <p>{element.job}</p>
             <p>{element.timeCount}</p>
-            <a class="flex items-center text-info gap-1 mt-2" href={element.link} target="_blank" referrerpolicy="no-referrer">
-              <span class="text-sm">Visit</span>
-              <FaChevronRight size={12} />
-            </a>
+            <Link name="Visit" href={element.link} />
           </article>
         );
       })
