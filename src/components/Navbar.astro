@@ -1,27 +1,27 @@
 ---
-import { FaTwitterSquare, FaLinkedin, FaHome } from 'react-icons/fa';
-
-const classes = {
-  link: 'text-black dark:text-white',
-};
+import NavbarList from '@/components/NavbarList.astro';
 ---
 
-<header class="bg-base-100 drop-shadow-md py-4">
+<header class="bg-base-100 drop-shadow-md">
   <nav class="flex justify-between items-center container mx-auto">
     <div class="flex items-center">
       <a class="text-black dark:text-white" href="/"> Portfolio</a>
     </div>
 
-    <div class="flex items-center gap-2">
-      <a class={classes.link} href="https://jesusbossa.dev" target="_blank" rel="noreferrer">
-        <FaHome />
-      </a>
-      <a class={classes.link} href="https://www.linkedin.com/in/makinox" target="_blank" rel="noreferrer">
-        <FaTwitterSquare />
-      </a>
-      <a class={classes.link} href="https://twitter.com/jesMakinox" target="_blank" rel="noreferrer">
-        <FaLinkedin />
-      </a>
+    <div class="flex-none">
+      <div class="flex lg:hidden dropdown dropdown-end">
+        <label tabindex={0} class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </label>
+        <ul tabindex={0} class="menu menu-sm dropdown-content mt-3 gap-2 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <NavbarList />
+        </ul>
+      </div>
+      <ul class="menu menu-horizontal items-center hidden lg:flex gap-2">
+        <NavbarList />
+      </ul>
     </div>
   </nav>
 </header>
