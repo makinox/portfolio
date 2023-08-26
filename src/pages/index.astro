@@ -1,8 +1,8 @@
 ---
 import Description from '@/modules/Description.astro';
-import Projects from '@/modules/Projects.astro';
 import Navbar from '@/components/Navbar.astro';
 import Layout from '@/layouts/Layout.astro';
+import Projects from '@/modules/Projects';
 import Hero from '@/modules/Hero.astro';
 import Work from '@/modules/Work.astro';
 ---
@@ -13,6 +13,6 @@ import Work from '@/modules/Work.astro';
     <Hero />
     <Description />
     <Work />
-    <Projects < main />
+    <Projects client:load />
   </main>
 </Layout>

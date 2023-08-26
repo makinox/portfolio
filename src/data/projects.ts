@@ -1,3 +1,12 @@
+export enum ProjectKind {
+  Web = 'Web',
+  Game = 'Game',
+  Native = 'Native',
+  Library = 'Library',
+  Old = 'Old',
+  All = 'All',
+}
+
 const projects = [
   {
     title: 'Blog',
@@ -6,7 +15,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/4c8a21769a63b98cd6157057f276ccb2/a16fa/projects-img12.avif',
     imageAlt: 'Blog por Jesus bossa',
     techList: ['React', 'Gatsby', 'GraphQl'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Invaders Game',
@@ -15,7 +24,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/a006daaa26f03f32dc1ddb1ee8449752/a16fa/projects-img25.avif',
     imageAlt: 'Juego de invasores por Jesus bossa',
     techList: ['Vanilla', 'Kaboom'],
-    status: 'Game',
+    kind: ProjectKind.Game,
   },
   {
     title: 'Crehana Desktop',
@@ -24,7 +33,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/713ef7d40c86077b1369cfba12517102/a16fa/projects-img22.avif',
     imageAlt: 'Crehana desktop por jesus bossa y el equipo crehana',
     techList: ['Typescript', 'Electron', 'React'],
-    status: 'Native',
+    kind: ProjectKind.Native,
   },
   {
     title: 'EVA PACS',
@@ -33,7 +42,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/1113e952722730b5060337fde6c310f4/15dc1/projects-img29.avif',
     imageAlt: 'Eva pacs por el equipo eva y jesus bossa  ',
     techList: ['Typescript', 'React'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Workshop: Data analysis, Server components',
@@ -42,7 +51,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/f8e2b0bee3180e34c8fcd543401ceae3/15dc1/projects-img31.avif',
     imageAlt: 'Workshop: Developing a football season analysis website using google sheets and firebase hosting by Jesus Bossa',
     techList: ['NextJS', 'Google Sheets'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Random',
@@ -51,7 +60,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/6b43b6e5511e15e28364d533143de106/15dc1/projects-img32.avif',
     imageAlt: 'Random por jesus bossa  ',
     techList: ['NextJS', 'DaisyUI', 'TailwindCSS'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Shopping',
@@ -60,7 +69,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/54f8d8d1a78b97bf8bf2755a706a055c/b8ef1/projects-img33.avif',
     imageAlt: 'Shopping por jesus bossa  ',
     techList: ['Vendure', 'MaterialUI'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Roomes',
@@ -69,7 +78,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/1d3398bc06baaa49970695c470392654/a16fa/projects-img23.avif',
     imageAlt: 'Roomes por Jesus bossa',
     techList: ['Svelte', 'Typescript'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Space-weight',
@@ -78,7 +87,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/3593ef50ebddc76651542f40a38c51f7/15dc1/projects-img26.avif',
     imageAlt: 'Space-weight por Jesus bossa',
     techList: ['NextJS', 'React', 'Typescript', '3D'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Limons',
@@ -87,7 +96,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/82d026a8a842a95e1d3ed08691939968/15dc1/projects-img27.avif',
     imageAlt: 'Limons por Jesus bossa',
     techList: ['NextJS', 'React', 'Typescript', '3D'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'D Task',
@@ -96,7 +105,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/9218de2a2a88b474227e0bb14925146a/a16fa/projects-img24.avif',
     imageAlt: 'D Task dapp por Jesus bossa',
     techList: ['Vanilla', 'Solidity', 'Blockchain'],
-    status: 'web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Makinox-g11n',
@@ -105,7 +114,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/baa7c281611213e3918f23327ed969c5/15dc1/projects-img30.avif',
     imageAlt: 'Makinox-g11n libreria por Jesus bossa',
     techList: ['Typescript', 'React', 'Nx'],
-    status: 'Library',
+    kind: ProjectKind.Library,
   },
   {
     title: 'Makinox-image-creator',
@@ -114,7 +123,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/d5ce4bc16f3378b8e49e8ae5428b5020/a16fa/projects-img21.avif',
     imageAlt: 'Makinox-image-creator libreria por Jesus bossa',
     techList: ['Typescript'],
-    status: 'Library',
+    kind: ProjectKind.Library,
   },
   {
     title: 'Makinox-tools',
@@ -123,7 +132,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/df2724b45616d78e2c845507ae606d98/15dc1/projects-img28.avif',
     imageAlt: 'Makinox-utils libreria por Jesus bossa',
     techList: ['Rust', 'Web Assembly'],
-    status: 'Library',
+    kind: ProjectKind.Library,
   },
   {
     title: 'Makinox-ui',
@@ -132,7 +141,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/0ae6f72cdf70f210b1fc7faccb391e18/a16fa/projects-img20.avif',
     imageAlt: 'Makinox-ui libreria por Jesus bossa',
     techList: ['React', 'Gatsby', 'GraphQl'],
-    status: 'Library',
+    kind: ProjectKind.Library,
   },
   {
     title: 'Preview',
@@ -141,7 +150,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/66d6ce2fc49dee6e31c49b3f64fbe0bc/a16fa/projects-img14.avif',
     imageAlt: 'App de videos por Jesus bossa',
     techList: ['Angular', 'Custom', 'PWA'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Snake Game',
@@ -150,7 +159,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/9d79ee09453e18787a4bc02e7783deeb/a16fa/projects-img16.avif',
     imageAlt: 'Juego de la culebrita por Jesus bossa',
     techList: ['Vanilla'],
-    status: 'Game',
+    kind: ProjectKind.Game,
   },
   {
     title: 'Memory Game',
@@ -159,7 +168,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/244dbf04e5d66e9d9fe0e532523adcb2/a16fa/projects-img15.avif',
     imageAlt: 'Juego de memoria por Jesus bossa',
     techList: ['Vanilla'],
-    status: 'Game',
+    kind: ProjectKind.Game,
   },
   {
     title: 'Moose',
@@ -168,7 +177,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/13ef294dbe6bfc5e0fc4201f132fe2a0/a16fa/projects-img13.avif',
     imageAlt: 'Museo interactivo por Jesus bossa',
     techList: ['React-Native', 'Gatsby', 'GraphQl'],
-    status: 'Native',
+    kind: ProjectKind.Native,
   },
   {
     title: 'Best pizza',
@@ -177,7 +186,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/bd215ef85d35599aee3ff1886772387b/a16fa/projects-img19.avif',
     imageAlt: 'Aplicacion de pizza por Jesus bossa',
     techList: ['React'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Cereno',
@@ -186,7 +195,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/b1a0a7f4dc508228c173218b90170dd0/a16fa/projects-img11.avif',
     imageAlt: 'Aplicacion de restaurantes por Jesus bossa',
     techList: ['React', 'Gatsby', 'GraphQl'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Thumb',
@@ -195,7 +204,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/d4db9d84695b3ff759496922ed6a2009/a16fa/projects-img18.avif',
     imageAlt: 'Aplicacion de votos por Jesus bossa',
     techList: ['React'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'Vtask',
@@ -204,7 +213,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/cd787ca6e712c054c02df974cf03a79b/a16fa/projects-img17.avif',
     imageAlt: 'Aplicacion de tareas por Jesus bossa',
     techList: ['Vue'],
-    status: 'Web',
+    kind: ProjectKind.Web,
   },
   {
     title: 'Petigram',
@@ -213,7 +222,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/bcb4dd5c389023f3289d0884afcdafa7/a16fa/projects-img10.avif',
     imageAlt: 'Aplicacion de mascotas por Jesus bossa',
     techList: ['React', 'Hooks', 'GraphQl'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'Darys',
@@ -222,7 +231,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/333a9173b25bf4c00054fc356bb523b6/a5da8/projects-img7.avif',
     imageAlt: 'Aplicacion de diario y notas por Jesus bossa',
     techList: ['Ionic', 'Capacitor', 'Angular'],
-    status: 'Native',
+    kind: ProjectKind.Native,
   },
   {
     title: 'Factiffy',
@@ -231,7 +240,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/2e96e4fa07db4fb1f3c8e1aa30abab6a/a5da8/projects-img8.avif',
     imageAlt: 'Aplicacion de red social por Jesus bossa',
     techList: ['Ionic', 'Cordova', 'Angular'],
-    status: 'Native',
+    kind: ProjectKind.Native,
   },
   {
     title: 'Financial',
@@ -240,7 +249,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/124a337b470d6fd1d43b5288d1f440a2/7a53c/projects-img9.avif',
     imageAlt: 'Aplicacion de finanzas por Jesus bossa',
     techList: ['Ios', 'Storyboards', 'Pods'],
-    status: 'Native',
+    kind: ProjectKind.Native,
   },
   {
     title: 'Priorize',
@@ -249,7 +258,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/91548098dc7ff17bcd15a9c15f9f54f7/a16fa/projects-img4.avif',
     imageAlt: 'Aplicacion para tareas basicas por Jesus bossa',
     techList: ['ReactJS', 'PWA'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'Trips',
@@ -258,7 +267,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/b012efb2511079e6e72a5eb9fed64a21/40afc/projects-img6.avif',
     imageAlt: 'Aplicacion de viajes por Jesus bossa',
     techList: ['Flutter', 'BLoC'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'MovieApp',
@@ -267,7 +276,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/556099c59d77cd1c2c6ffbfc2d7e39e8/80892/projects-img5.avif',
     imageAlt: 'Aplicacion para ver trailers de peliculas por Jesus bossa',
     techList: ['React-native', 'Redux'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'Utopia',
@@ -276,7 +285,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/0998d05ee318e18df84b56a301d43128/80892/projects-img3.avif',
     imageAlt: 'Aplicacion de utopia creada por Jesus bossa',
     techList: ['VanillaJS', 'PWA'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'Inventario',
@@ -285,7 +294,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/a633a67e0df7a8610911dc886cfc307f/80892/projects-img2.avif',
     imageAlt: 'Inventario creado por Jesus bossa',
     techList: ['React', 'Redux', 'Bootstrap', 'PWA'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
   {
     title: 'Regypos',
@@ -294,7 +303,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/b9277ccd38c7ee8177e4113e24412f5e/80892/projects-img1.avif',
     imageAlt: 'Regypos creado por Jesus bossa',
     techList: ['React', 'Bootstrap', 'PWA'],
-    status: 'Old',
+    kind: ProjectKind.Old,
   },
 ];
 
