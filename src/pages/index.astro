@@ -5,6 +5,7 @@ import Layout from '@/layouts/Layout.astro';
 import Projects from '@/modules/Projects';
 import Hero from '@/modules/Hero.astro';
 import Work from '@/modules/Work.astro';
+import Skills from '@/modules/Skills';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,5 +15,6 @@ import Work from '@/modules/Work.astro';
     <Description />
     <Work />
     <Projects client:load />
+    <Skills client:load />
   </main>
 </Layout>
