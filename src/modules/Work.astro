@@ -6,20 +6,20 @@ import { cn } from '@/utils';
 ---
 
 <section class={cn(globalClasses.container, 'mt-40')} id="experience">
-  <h2 class="text-4xl font-bold mb-12">More than 7 years working with large companies</h2>
+  <h2 class={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-12')}>More than 7 years working with large companies</h2>
   <div class={cn(globalClasses.itemsGrid, 'justify-center items-center gap-10')}>
     {
       workData.map((element, index) => {
         const indexCount = index + 1;
         return (
-          <article class="w-72 flex flex-col items-center mx-auto">
+          <article class="w-full sm:w-72 flex flex-col items-center mx-auto">
             <div class="relative">
               <div class="absolute badge badge-info badge-sm top-0 left-0 flex">{indexCount}</div>
               <img class="w-20 h-20 rounded-full border-neutral-200 border p-2" src={element.image} alt={element.place} />
             </div>
             <h3 class="text-2xl text-center font-semibold my-2">{element.place}</h3>
-            <p>{element.job}</p>
-            <p>{element.timeCount}</p>
+            <p class="text-center">{element.job}</p>
+            <p class="text-center">{element.timeCount}</p>
             <Link name="Visit" href={element.link} className="mt-2" />
           </article>
         );

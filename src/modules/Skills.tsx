@@ -19,7 +19,7 @@ const Skills = () => {
 
   return (
     <section className={cn(globalClasses.container, 'mt-40')} id="skills">
-      <h2 className="text-4xl font-bold mb-10">Skills</h2>
+      <h2 className={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-10')}>Skills</h2>
       <section className={classes.section}>
         {levelList.map((level) => (
           <button

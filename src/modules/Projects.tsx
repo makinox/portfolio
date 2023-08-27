@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <section className={cn(globalClasses.container, 'mt-40')} id="projects">
-      <h2 className="text-4xl font-bold mb-10">Projects</h2>
+      <h2 className={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-10')}>Projects</h2>
       <section className="flex justify-center flex-wrap gap-4 mb-20">
         {kindList.map((kind) => (
           <button
