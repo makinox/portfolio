@@ -1,0 +1,26 @@
+---
+import peopleReferences from '@/data/people';
+import Link from '@/components/Link';
+import { NAME } from '@/constants';
+---
+
+<section class="container mx-auto mt-80">
+  <h2 class="text-4xl font-bold mb-10">References</h2>
+  <section class="flex flex-col gap-10">
+    {
+      peopleReferences.map((person) => (
+        <article class="shadow rounded-md p-4">
+          <div class="flex items-center gap-8">
+            <img class="w-20 rounded-full border-neutral-200 border p-2" src={person.src} alt={`${person.name} telling stories about ${NAME}`} />
+            <div>
+              <h3 class="text-xl font-semibold">{person.name}</h3>
+              <p>{person.place}</p>
+              <Link href="https://www.linkedin.com/in/makinox" name="Verify" />
+            </div>
+          </div>
+          <p class="mt-4">{person.text}</p>
+        </article>
+      ))
+    }
+  </section>
+</section>

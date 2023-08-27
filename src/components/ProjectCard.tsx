@@ -20,7 +20,7 @@ const ProjectCard = ({ title, techList, app, repo, imageSrc, imageAlt }: Project
       <p>{techText}</p>
       <div className="flex gap-x-4 items-center">
         {buttons.map((button) => (
-          <Link key={button.text} href={button.href} name={button.text} />
+          <Link key={button.text} href={button.href} name={button.text} className="mt-2" />
         ))}
       </div>
     </article>

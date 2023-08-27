@@ -2,6 +2,7 @@
 import Description from '@/modules/Description.astro';
 import Navbar from '@/components/Navbar.astro';
 import Layout from '@/layouts/Layout.astro';
+import People from '@/modules/People.astro';
 import Projects from '@/modules/Projects';
 import Hero from '@/modules/Hero.astro';
 import Work from '@/modules/Work.astro';
@@ -16,5 +17,6 @@ import Skills from '@/modules/Skills';
     <Work />
     <Projects client:load />
     <Skills client:load />
+    <People />
   </main>
 </Layout>
