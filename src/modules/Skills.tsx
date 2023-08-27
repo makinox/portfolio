@@ -5,7 +5,7 @@ import { cn } from '@/utils';
 
 const classes = {
   button: 'btn btn-info btn-sm w-28',
-  section: 'flex justify-center flex-wrap gap-4 my-20',
+  section: 'flex justify-center flex-wrap gap-4 mb-20',
 };
 
 const Skills = () => {
@@ -17,7 +17,7 @@ const Skills = () => {
   }, [currentLevel]);
 
   return (
-    <section className="container mx-auto mt-80">
+    <section className="container mx-auto mt-40">
       <h2 className="text-4xl font-bold mb-10">Skills</h2>
       <section className={classes.section}>
         {levelList.map((level) => (

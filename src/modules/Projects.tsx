@@ -17,9 +17,9 @@ const Projects = () => {
   }, [selectedKind]);
 
   return (
-    <section className="container mx-auto mt-80">
+    <section className="container mx-auto mt-40">
       <h2 className="text-4xl font-bold mb-10">Projects</h2>
-      <section className="flex justify-center flex-wrap gap-4 my-20">
+      <section className="flex justify-center flex-wrap gap-4 mb-20">
         {kindList.map((kind) => (
           <button
             key={kind}
