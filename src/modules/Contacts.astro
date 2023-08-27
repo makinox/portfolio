@@ -1,6 +1,5 @@
 ---
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
-
+import Icon, { IconCatalog } from '@/components/Icon';
 import { globalClasses } from '@/constants';
 import { cn } from '@/utils';
 
@@ -8,6 +7,7 @@ const classes = {
   container: 'flex justify-center flex-wrap items-center gap-4',
   squareButtons: 'btn btn-info btn-sm',
   linearButtons: 'text-info',
+  icon: 'text-info w-8 h-8',
 };
 ---
 
@@ -28,16 +28,16 @@ const classes = {
   </section>
   <section class={cn(classes.container, 'mt-10')}>
     <a class={classes.linearButtons} href="https://github.com/makinox" target="_blank">
-      <FaGithubSquare size={30} aria-label="Github" />
+      <Icon className={classes.icon} icon={IconCatalog.github} aria-label="Github" />
     </a>
     <a class={classes.linearButtons} href="https://www.instagram.com/makinoxz" target="_blank">
-      <FaInstagramSquare size={30} aria-label="Instagram" />
+      <Icon className={classes.icon} icon={IconCatalog.instagram} aria-label="Instagram" />
     </a>
     <a class={classes.linearButtons} href="https://www.linkedin.com/in/makinox/" target="_blank">
-      <FaLinkedin size={30} aria-label="Linkedin" />
+      <Icon className={classes.icon} icon={IconCatalog.linkedin} aria-label="Linkedin" />
     </a>
     <a class={classes.linearButtons} href="https://twitter.com/jesMakinox" target="_blank">
-      <FaTwitterSquare size={30} aria-label="Twitter" />
+      <Icon className={classes.icon} icon={IconCatalog.twitter} aria-label="Twitter" />
     </a>
   </section>
 </section>

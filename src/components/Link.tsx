@@ -1,5 +1,5 @@
 import { cn } from '@/utils';
-import { FaChevronRight } from 'react-icons/fa';
+import Icon, { IconCatalog } from './Icon';
 
 type LinkProps = {
   name: string;
@@ -15,7 +15,7 @@ const Link = ({ name, href, className }: LinkProps) => {
   return (
     <a className={classes.container} href={href} target="_blank" referrerPolicy="no-referrer">
       <span className="text-sm">{name}</span>
-      <FaChevronRight size={12} />
+      <Icon className="w-3 h-3 text-info" icon={IconCatalog.right} />
     </a>
   );
 };
