@@ -5,7 +5,7 @@ import { globalClasses } from '@/constants';
 import { cn } from '@/utils';
 
 const classes = {
-  button: 'btn btn-info btn-sm w-28',
+  button: 'btn btn-info btn-sm w-36 whitespace-nowrap',
   section: 'flex justify-center flex-wrap gap-4 mb-20',
 };
 
@@ -21,18 +21,26 @@ const Skills = () => {
     <section className={cn(globalClasses.container, 'mt-40')} id="skills">
       <h2 className={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-10')}>Skills</h2>
       <section className={classes.section}>
-        {levelList.map((level) => (
-          <button
-            key={level}
-            className={cn(classes.button, {
-              'btn-outline': currentLevel !== level,
-              'btn-contained': currentLevel === level,
-            })}
-            onClick={() => setCurrentLevel(level)}
-          >
-            {level}
-          </button>
-        ))}
+        {levelList.map((level) => {
+          const levelCount = useMemo(() => {
+            if (level === SKILL_LEVELS.ALL) return currentSkills.length;
+            return currentSkills.filter((skill) => skill.level === level).length;
+          }, []);
+
+          return (
+            <button
+              key={level}
+              className={cn(classes.button, {
+                'btn-outline': currentLevel !== level,
+                'btn-contained': currentLevel === level,
+              })}
+              onClick={() => setCurrentLevel(level)}
+            >
+              <span>{level}</span>
+              <span>{levelCount}</span>
+            </button>
+          );
+        })}
       </section>
       <section className={classes.section}>
         {skillList.map((skill) => (
