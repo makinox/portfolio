@@ -17,7 +17,7 @@ const Skills = () => {
   }, [currentLevel]);
 
   return (
-    <section className="container mx-auto mt-40">
+    <section className="container mx-auto mt-40" id="skills">
       <h2 className="text-4xl font-bold mb-10">Skills</h2>
       <section className={classes.section}>
         {levelList.map((level) => (
