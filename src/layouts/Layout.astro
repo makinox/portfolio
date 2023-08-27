@@ -1,20 +1,33 @@
 ---
+import { NAME } from '@/constants';
 import '@fontsource-variable/inter';
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const imagePath = '/assets/preview.png';
+const description = 'Portfolio of Jesús David Bossa. Here I share my experience by publicizing my projects and my way of work';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="image" content={imagePath} />
+    <meta property="og:url" content="https://jesusbossa.dev/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imagePath} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={NAME} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imagePath} />
     <title>{title}</title>
   </head>
   <body>
