@@ -186,7 +186,7 @@ const projects = [
     imageSrc: 'https://jesusbossa.dev/static/bd215ef85d35599aee3ff1886772387b/a16fa/projects-img19.avif',
     imageAlt: 'Aplicacion de pizza por Jesus bossa',
     techList: ['React'],
-    kind: ProjectKind.Web,
+    kind: ProjectKind.Old,
   },
   {
     title: 'Cereno',

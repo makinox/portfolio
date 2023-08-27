@@ -7,6 +7,13 @@ export default [
     image: 'https://jesusbossa.dev/static/79293813a8aef9e4cacd7ab5c366bfc6/6d0de/work1.avif',
   },
   {
+    job: 'Product Engineer',
+    place: 'Freelance services',
+    timeCount: 'Currently since March 2017',
+    link: 'https://jesusbossa.dev/',
+    image: 'https://picsum.photos/id/5/80/80',
+  },
+  {
     job: 'Front End Developer',
     place: 'Crehana',
     timeCount: '1 year and 1 month',

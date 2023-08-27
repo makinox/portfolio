@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import { SKILL_LEVELS, currentSkills } from '@/data/skills';
+import { globalClasses } from '@/constants';
 import { cn } from '@/utils';
 
 const classes = {
@@ -17,7 +18,7 @@ const Skills = () => {
   }, [currentLevel]);
 
   return (
-    <section className="container mx-auto mt-40" id="skills">
+    <section className={cn(globalClasses.container, 'mt-40')} id="skills">
       <h2 className="text-4xl font-bold mb-10">Skills</h2>
       <section className={classes.section}>
         {levelList.map((level) => (

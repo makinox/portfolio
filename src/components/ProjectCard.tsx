@@ -15,7 +15,7 @@ const ProjectCard = ({ title, techList, app, repo, imageSrc, imageAlt }: Project
 
   return (
     <article>
-      <img className="p-2 border border-neutral-200 object-cover w-full h-40 rounded-md" src={imageSrc} alt={imageAlt} />
+      <img className="p-2 border border-neutral-200 object-cover w-full h-40 rounded-xl" src={imageSrc} alt={imageAlt} />
       <h3 className="text-2xl font-semibold my-2">{title}</h3>
       <p>{techText}</p>
       <div className="flex gap-x-4 items-center">

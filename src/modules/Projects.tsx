@@ -2,6 +2,7 @@ import projects, { ProjectKind } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
 import { cn } from '@/utils';
 import { useMemo, useState } from 'react';
+import { globalClasses } from '@/constants';
 
 const classes = {
   button: 'btn btn-info btn-sm w-24',
@@ -17,7 +18,7 @@ const Projects = () => {
   }, [selectedKind]);
 
   return (
-    <section className="container mx-auto mt-40" id="projects">
+    <section className={cn(globalClasses.container, 'mt-40')} id="projects">
       <h2 className="text-4xl font-bold mb-10">Projects</h2>
       <section className="flex justify-center flex-wrap gap-4 mb-20">
         {kindList.map((kind) => (
@@ -33,7 +34,7 @@ const Projects = () => {
           </button>
         ))}
       </section>
-      <section className="grid grid-cols-5 gap-10">
+      <section className={cn(globalClasses.itemsGrid, 'gap-10')}>
         {projectList.map((elements) => (
           <ProjectCard key={elements.title} {...elements} />
         ))}

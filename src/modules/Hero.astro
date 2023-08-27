@@ -1,8 +1,9 @@
 ---
-import { NAME } from '@/constants';
+import { NAME, globalClasses } from '@/constants';
+import { cn } from '@/utils';
 ---
 
-<section class="container mx-auto flex items-center flex-col">
-  <h1 class="text-9xl font-semibold mb-20 my-60 bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">{NAME}</h1>
-  <p class="text-5xl font-medium bg-gradient-to-r from-slate-500 to-slate-800 bg-clip-text text-transparent">Software architect</p>
+<section class={cn(globalClasses.container, 'flex items-center flex-col')}>
+  <h1 class="text-9xl font-semibold mb-20 my-60 text-center bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">{NAME}</h1>
+  <p class={cn(globalClasses.blackGradient, 'text-5xl text-center font-medium')}>Software architect</p>
 </section>

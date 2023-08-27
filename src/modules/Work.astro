@@ -1,16 +1,18 @@
 ---
+import { globalClasses } from '@/constants';
 import Link from '@/components/Link';
 import workData from '@/data/work';
+import { cn } from '@/utils';
 ---
 
-<section class="container mx-auto mt-40" id="experience">
+<section class={cn(globalClasses.container, 'mt-40')} id="experience">
   <h2 class="text-4xl font-bold mb-12">More than 7 years working with large companies</h2>
-  <div class="flex justify-center flex-wrap gap-10">
+  <div class={cn(globalClasses.itemsGrid, 'justify-center items-center gap-10')}>
     {
       workData.map((element, index) => {
         const indexCount = index + 1;
         return (
-          <article class="w-72 flex flex-col items-center">
+          <article class="w-72 flex flex-col items-center mx-auto">
             <div class="relative">
               <div class="absolute badge badge-info badge-sm top-0 left-0 flex">{indexCount}</div>
               <img class="w-20 h-20 rounded-full border-neutral-200 border p-2" src={element.image} alt={element.place} />
