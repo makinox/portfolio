@@ -44,7 +44,7 @@ const Skills = () => {
       </section>
       <section className={classes.section}>
         {skillList.map((skill) => (
-          <article className="badge badge-ghost" key={skill.name}>
+          <article className="badge p-4 shadow-md" key={skill.name}>
             {skill.name}
           </article>
         ))}
