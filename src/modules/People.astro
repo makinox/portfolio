@@ -12,7 +12,7 @@ import { cn } from '@/utils';
       peopleReferences.map((person) => (
         <article class="shadow-md rounded-md p-4 bg-base-100">
           <div class="flex items-center gap-8">
-            <img class="w-20 h-20 rounded-full border-neutral-200 border p-2" src={person.src} alt={`${person.name} telling stories about ${NAME}`} />
+            <img class="w-20 h-20 rounded-full shadow-md p-2" src={person.src} alt={`${person.name} telling stories about ${NAME}`} />
             <div>
               <h3 class="text-xl font-semibold">{person.name}</h3>
               <p>{person.place}</p>
