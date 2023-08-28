@@ -1,11 +1,16 @@
 ---
 import NavbarList from '@/components/NavbarList.astro';
+import Icon, { IconCatalog } from './Icon';
+import { NAME } from '@/constants';
 ---
 
 <header class="bg-base-100/80 drop-shadow-md sticky top-0 px-2">
   <nav class="flex justify-between items-center container mx-auto">
     <div class="flex items-center">
-      <a class="text-black dark:text-white" href="/"> Portfolio</a>
+      <a class="flex items-center gap-2" href="/">
+        <Icon className="w-8 h-8 text-info" icon={IconCatalog.logo} aria-label={`${NAME}'s logo'`} />
+        <span>Portfolio</span>
+      </a>
     </div>
 
     <div class="flex-none">
