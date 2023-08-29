@@ -14,6 +14,20 @@ export default [
     image: 'https://picsum.photos/id/5/80/80',
   },
   {
+    job: 'Community organizer',
+    place: 'Caribe dev',
+    timeCount: 'Currently since October 2022',
+    link: 'https://caribedev.org',
+    image: 'https://buck-one.s3.us-south.cloud-object-storage.appdomain.cloud/portfolioImages/work/work9.jpeg',
+  },
+  {
+    job: 'Community organizer',
+    place: 'BarranquillaJS',
+    timeCount: 'Currently since June 2019',
+    link: 'https://barranquillajs.org',
+    image: 'https://buck-one.s3.us-south.cloud-object-storage.appdomain.cloud/portfolioImages/work/work8.jpeg',
+  },
+  {
     job: 'Front End Developer',
     place: 'Crehana',
     timeCount: '1 year and 1 month',
