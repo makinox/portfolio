@@ -9,6 +9,7 @@ import Projects from '@/modules/Projects';
 import Hero from '@/modules/Hero.astro';
 import Work from '@/modules/Work.astro';
 import Skills from '@/modules/Skills';
+import Talks from '@/modules/Talks.astro';
 ---
 
 <Layout title="Jesús David Bossa | Portfolio">
@@ -17,10 +18,11 @@ import Skills from '@/modules/Skills';
     <Hero />
     <Description />
     <Work />
+    <Talks />
     <Projects client:load />
     <Skills client:load />
     <People />
     <Contacts />
-    <Footer />
+    <Footer client:load />
   </main>
 </Layout>

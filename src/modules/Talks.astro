@@ -1,0 +1,26 @@
+---
+import ProjectCard from '@/components/ProjectCard';
+import { globalClasses } from '@/constants';
+import { ProjectKind } from '@/data/projects';
+import talksData from '@/data/talks';
+import { cn } from '@/utils';
+---
+
+<section class={cn(globalClasses.container, 'mt-40')} id="talks">
+  <h2 class={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-12')}>Talks</h2>
+  <div class={cn(globalClasses.itemsGrid, 'gap-10')}>
+    {
+      talksData.map((element, index) => (
+        <ProjectCard
+          title={element.title}
+          app={element.link}
+          imageSrc={element.image}
+          imageAlt={element.title}
+          techList={[element.time, element.event]}
+          repo=""
+          kind={ProjectKind.All}
+        />
+      ))
+    }
+  </div>
+</section>
