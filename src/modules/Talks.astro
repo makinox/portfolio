@@ -10,7 +10,7 @@ import { cn } from '@/utils';
   <h2 class={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-12')}>Talks</h2>
   <div class={cn(globalClasses.itemsGrid, 'gap-10')}>
     {
-      talksData.map((element, index) => (
+      talksData.map((element) => (
         <ProjectCard
           title={element.title}
           app={element.link}

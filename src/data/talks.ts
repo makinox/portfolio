@@ -1,5 +1,13 @@
 export default [
   {
+    title: 'El futuro de la tecnología más allá de la IA',
+    event: 'Institución Universitaria de Barranquilla',
+    time: 'Jun 13 2024',
+    repo: 'https://drive.google.com/drive/folders/1kngfuXQdrsddyE1NvwjWKzClyj1YR7gT',
+    link: 'https://www.instagram.com/p/C761bgYuj_y/',
+    image: 'https://instagram.fctg1-4.fna.fbcdn.net/v/t39.30808-6/444470024_18440168131000846_7404869772515302437_n.jpg?stp=dst-jpg_e35_p1080x1080&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMzUweDE2ODcuc2RyLmYzMDgwOCJ9&_nc_ht=instagram.fctg1-4.fna.fbcdn.net&_nc_cat=110&_nc_ohc=ucVB42aWHPkQ7kNvgFKIoAG&edm=AEhyXUkAAAAA&ccb=7-5&ig_cache_key=MzM4NTI1MzA1NjU4NzkwNzA1OA%3D%3D.2-ccb7-5&oh=00_AYDtdb39-iY2L06vQYIwoEPPjHuyrQrcY6xbL-oXck-kOg&oe=66705CC0&_nc_sid=cf751b',
+  },
+  {
     title: 'Flisol Barranquilla 2024',
     event: 'LinuxBQ',
     time: 'Apr 27 2024',
