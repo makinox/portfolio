@@ -1,20 +1,26 @@
 import { useMemo, useState } from 'react';
 
-import { SKILL_LEVELS, currentSkills } from '@/data/skills';
 import { globalClasses } from '@/constants';
-import { cn } from '@/utils';
+import { cn, SKILL_LEVELS } from '@/utils';
 
 const classes = {
   button: 'btn btn-info btn-sm w-36 whitespace-nowrap',
   section: 'flex justify-center flex-wrap gap-4 mb-20',
 };
 
-const Skills = () => {
+interface skillsProps {
+  skills: Array<{
+    name: string;
+    level: SKILL_LEVELS
+  }>
+}
+
+const Skills = ({skills}: skillsProps) => {
   const [currentLevel, setCurrentLevel] = useState(SKILL_LEVELS.MASTER);
   const levelList = Object.values(SKILL_LEVELS);
   const skillList = useMemo(() => {
-    if (currentLevel === 'All') return currentSkills;
-    return currentSkills.filter((skill) => skill.level === currentLevel);
+    if (currentLevel === 'All') return skills;
+    return skills.filter((skill) => skill.level === currentLevel);
   }, [currentLevel]);
 
   return (
@@ -23,8 +29,8 @@ const Skills = () => {
       <section className={classes.section}>
         {levelList.map((level) => {
           const levelCount = useMemo(() => {
-            if (level === SKILL_LEVELS.ALL) return currentSkills.length;
-            return currentSkills.filter((skill) => skill.level === level).length;
+            if (level === SKILL_LEVELS.ALL) return skills.length;
+            return skills.filter((skill) => skill.level === level).length;
           }, []);
 
           return (

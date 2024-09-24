@@ -1,16 +1,27 @@
 ---
 import ProjectCard from '@/components/ProjectCard';
 import { globalClasses } from '@/constants';
-import { ProjectKind } from '@/data/projects';
-import talksData from '@/data/talks';
-import { cn } from '@/utils';
+import { cn, ProjectKind } from '@/utils';
+
+interface Props {
+  talks: Array<{
+    title: string;
+    event: string;
+    time: string;
+    repo: string;
+    link: string;
+    image: string;
+  }>;
+}
+
+const { talks } = Astro.props;
 ---
 
 <section class={cn(globalClasses.container, 'mt-40')} id="talks">
   <h2 class={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-12')}>Talks</h2>
   <div class={cn(globalClasses.itemsGrid, 'gap-10')}>
     {
-      talksData.map((element) => (
+      talks.map((element) => (
         <ProjectCard
           title={element.title}
           app={element.link}

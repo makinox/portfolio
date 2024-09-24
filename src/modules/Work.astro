@@ -1,15 +1,26 @@
 ---
 import { globalClasses } from '@/constants';
 import Link from '@/components/Link';
-import workData from '@/data/work';
 import { cn } from '@/utils';
+
+interface Props {
+  work: Array<{
+    job: string;
+    place: string;
+    timeCount: string;
+    link: string;
+    image: string;
+  }>;
+}
+
+const { work } = Astro.props;
 ---
 
 <section class={cn(globalClasses.container, 'mt-40')} id="experience">
   <h2 class={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-12')}>More than 8 years working with large companies</h2>
   <div class={cn(globalClasses.itemsGrid, 'justify-center items-center gap-10')}>
     {
-      workData.map((element, index) => {
+      work.map((element, index) => {
         const indexCount = index + 1;
         return (
           <article class="w-full sm:w-72 flex flex-col items-center mx-auto">

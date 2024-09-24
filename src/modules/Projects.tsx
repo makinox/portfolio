@@ -1,14 +1,27 @@
-import projects, { ProjectKind } from '@/data/projects';
-import ProjectCard from '@/components/ProjectCard';
-import { cn } from '@/utils';
+
 import { useMemo, useState } from 'react';
+
+import ProjectCard from '@/components/ProjectCard';
 import { globalClasses } from '@/constants';
+import { cn, ProjectKind } from '@/utils';
 
 const classes = {
   button: 'btn btn-info btn-sm w-28 whitespace-nowrap',
 };
 
-const Projects = () => {
+interface projectsProps {
+  projects: Array<{
+    "title": string,
+    "repo": string,
+    "app": string,
+    "imageSrc": string,
+    "imageAlt": string,
+    "techList": Array<string>,
+    "kind": ProjectKind
+  }>
+}
+
+const Projects = ({projects}: projectsProps) => {
   const [selectedKind, setKind] = useState(ProjectKind.Web);
   const kindList = Object.values(ProjectKind).filter((kind) => kind !== ProjectKind.Old);
 

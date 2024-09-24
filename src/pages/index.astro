@@ -1,15 +1,19 @@
 ---
 import Description from '@/modules/Description.astro';
 import Contacts from '@/modules/Contacts.astro';
-import Navbar from '@/components/Navbar.astro';
-import Layout from '@/layouts/Layout.astro';
 import People from '@/modules/People.astro';
 import Footer from '@/modules/Footer.astro';
 import Projects from '@/modules/Projects';
+import Talks from '@/modules/Talks.astro';
 import Hero from '@/modules/Hero.astro';
 import Work from '@/modules/Work.astro';
 import Skills from '@/modules/Skills';
-import Talks from '@/modules/Talks.astro';
+
+import Navbar from '@/components/Navbar.astro';
+
+import Layout from '@/layouts/Layout.astro';
+
+const portfolioData = await (await fetch(import.meta.env.PORTFOLIO_SOURCE)).json();
 ---
 
 <Layout title="Jesús David Bossa | Portfolio">
@@ -17,11 +21,11 @@ import Talks from '@/modules/Talks.astro';
     <Navbar />
     <Hero />
     <Description />
-    <Work />
-    <Talks />
-    <Projects client:load />
-    <Skills client:load />
-    <People />
+    <Work work={portfolioData.work} />
+    <Talks talks={portfolioData.talks} />
+    <Projects projects={portfolioData.projects} client:load />
+    <Skills skills={portfolioData.skills} client:load />
+    <People people={portfolioData.people} />
     <Contacts />
     <Footer />
   </main>
