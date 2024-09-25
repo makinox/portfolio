@@ -1,9 +1,17 @@
 import { useMemo } from 'react';
 
-import type { ProjectType } from '@/data/projects';
 import Link from '@/components/Link';
 
-const ProjectCard = ({ title, techList, app, repo, imageSrc, imageAlt }: ProjectType) => {
+interface ProjectCardType {
+  title: string;
+  techList: Array<string>;
+  app: string;
+  repo: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+const ProjectCard = ({ title, techList, app, repo, imageSrc, imageAlt }: ProjectCardType) => {
   const techText = techList.join(', ');
 
   const buttons = useMemo(() => {

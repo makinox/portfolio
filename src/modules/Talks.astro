@@ -1,7 +1,7 @@
 ---
 import ProjectCard from '@/components/ProjectCard';
 import { globalClasses } from '@/constants';
-import { cn, ProjectKind } from '@/utils';
+import { cn } from '@/utils';
 
 interface Props {
   talks: Array<{
@@ -29,7 +29,6 @@ const { talks } = Astro.props;
           imageAlt={element.title}
           techList={[element.time, element.event]}
           repo={element.repo}
-          kind={ProjectKind.All}
         />
       ))
     }

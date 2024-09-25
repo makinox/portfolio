@@ -13,7 +13,9 @@ import Navbar from '@/components/Navbar.astro';
 
 import Layout from '@/layouts/Layout.astro';
 
-const portfolioData = await (await fetch(import.meta.env.PORTFOLIO_SOURCE)).json();
+import { transformPortfolioData } from '@/utils';
+
+const portfolioData = await transformPortfolioData(await (await fetch(import.meta.env.PORTFOLIO_SOURCE)).json());
 ---
 
 <Layout title="Jesús David Bossa | Portfolio">

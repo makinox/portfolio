@@ -8,6 +8,6 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   image: {
     remotePatterns: [{ protocol: 'https' }],
-    domains: ['jesusbossa.dev', 'buck-one.s3.us-south.cloud-object-storage.appdomain.cloud', 'picsum.photos'],
+    domains: ['jesusbossa.dev', 'buck-one.s3.us-south.cloud-object-storage.appdomain.cloud', 'picsum.photos', "storage.googleapis.com", "img.evbuc.com"],
   },
 });
