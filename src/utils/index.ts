@@ -14,6 +14,7 @@ export enum SKILL_LEVELS {
 }
 
 export enum ProjectKind {
+  Key = 'Key',
   Web = 'Web',
   Game = 'Game',
   Native = 'Native',

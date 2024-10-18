@@ -1,4 +1,3 @@
-
 import { useMemo, useState } from 'react';
 
 import ProjectCard from '@/components/ProjectCard';
@@ -9,24 +8,28 @@ const classes = {
   button: 'btn btn-info btn-sm w-28 whitespace-nowrap',
 };
 
+const keyProjectIndexes = [0, 1, 2, 3, 4, 5, 6, 7];
+
 interface projectsProps {
   projects: Array<{
-    "title": string,
-    "repo": string,
-    "app": string,
-    "imageSrc": string,
-    "imageAlt": string,
-    "techList": Array<string>,
-    "kind": ProjectKind
-  }>
+    title: string;
+    repo: string;
+    app: string;
+    imageSrc: string;
+    imageAlt: string;
+    techList: Array<string>;
+    kind: ProjectKind;
+  }>;
 }
 
-const Projects = ({projects}: projectsProps) => {
-  const [selectedKind, setKind] = useState(ProjectKind.Web);
+const Projects = ({ projects }: projectsProps) => {
+  const [selectedKind, setKind] = useState(ProjectKind.Key);
   const kindList = Object.values(ProjectKind).filter((kind) => kind !== ProjectKind.Old);
 
   const projectList = useMemo(() => {
-    if (selectedKind === 'All') return projects;
+    if (selectedKind === ProjectKind.All) return projects;
+    if (selectedKind === ProjectKind.Key) return projects.filter((_, index) => keyProjectIndexes.includes(index));
+
     return projects.filter((project) => project.kind === selectedKind);
   }, [selectedKind]);
 
@@ -36,7 +39,8 @@ const Projects = ({projects}: projectsProps) => {
       <section className="flex justify-center flex-wrap gap-4 mb-20">
         {kindList.map((kind) => {
           const projectCount = useMemo(() => {
-            if (kind === 'All') return projects.length;
+            if (kind === ProjectKind.All) return projects.length;
+            if (kind === ProjectKind.Key) return projects.filter((_, index) => keyProjectIndexes.includes(index)).length;
             return projects.filter((project) => project.kind === kind).length;
           }, []);
 
