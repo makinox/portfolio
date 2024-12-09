@@ -8,7 +8,7 @@ const classes = {
   button: 'btn btn-info btn-sm w-28 whitespace-nowrap',
 };
 
-const keyProjectIndexes = [0, 1, 2, 3, 4, 5, 6, 7];
+const keyProjectIndexes = [1, 2, 3, 4, 5, 6, 7, 8];
 
 interface projectsProps {
   projects: Array<{

@@ -19,6 +19,7 @@ export enum ProjectKind {
   Game = 'Game',
   Native = 'Native',
   Library = 'Library',
+  IA = 'IA',
   Old = 'Old',
   All = 'All',
 }
