@@ -3,12 +3,25 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build_and_deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn install && yarn build
+
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Build project
+        run: yarn build
+        env:
+          PORTFOLIO_SOURCE: ${{ secrets.PORTFOLIO_SOURCE }}
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
