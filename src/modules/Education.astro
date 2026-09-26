@@ -1,0 +1,32 @@
+---
+import { globalClasses } from "@/constants";
+import { cn } from "@/utils";
+
+interface Props {
+    educationList: Array<{
+        title: string;
+        institution: string;
+        description: string;
+        date: string;
+    }>;
+}
+
+const { educationList } = Astro.props;
+---
+
+<section class={cn(globalClasses.container, "mt-40")} id="talks">
+    <h2 class={cn(globalClasses.blackGradient, "text-4xl font-bold mb-12")}>
+        Education
+    </h2>
+    <div class={cn(globalClasses.itemsGrid, "gap-2")}>
+        {educationList.map((element) => (
+            <article class="flex flex-col items-start p-4 shadow-md bg-base-100 rounded-lg">
+                <span class="text-xl mb-1 text-slate-900 dark:text-slate-50">
+                    {element.institution}
+                </span>
+                <h4>{element.title}</h4>
+                <span class="mt-1 text-slate-600">{element.date}</span>
+            </article>
+        ))}
+    </div>
+</section>

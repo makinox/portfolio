@@ -9,6 +9,7 @@ import Hero from "@/modules/Hero.astro";
 import Work from "@/modules/Work.astro";
 import Skills from "@/modules/Skills";
 import Books from "@/modules/Books.astro";
+import Education from "@/modules/Education.astro";
 
 import Navbar from "@/components/Navbar.astro";
 
@@ -31,6 +32,7 @@ console.log(portfolioData);
         <Work work={portfolioData.work} />
         <Talks talks={portfolioData.talks} />
         <Projects projects={portfolioData.projects} client:load />
+        <Education educationList={portfolioData.education} />
         <Skills skills={portfolioData.skills} client:load />
         <Books bookList={portfolioData.books} />
         <People people={portfolioData.people} />
