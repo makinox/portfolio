@@ -1,43 +1,87 @@
 ---
-import Icon, { IconCatalog } from '@/components/Icon';
-import { globalClasses } from '@/constants';
-import { cn } from '@/utils';
+import Icon, { IconCatalog } from "@/components/Icon";
+import { globalClasses } from "@/constants";
+import { cn } from "@/utils";
 
 const classes = {
-  container: 'flex justify-center flex-wrap items-center gap-4',
-  squareButtons: 'btn btn-info btn-sm',
-  linearButtons: 'text-info',
-  icon: 'text-info w-8 h-8',
+    container: "flex justify-center flex-wrap items-center gap-4",
+    squareButtons: "btn btn-info btn-sm",
+    linearButtons: "text-info",
+    icon: "text-info w-8 h-8",
 };
 ---
 
-<section class={cn(globalClasses.container, 'mt-40')} id="contact">
-  <h2 class={cn(globalClasses.blackGradient, 'text-4xl font-bold mb-10')}>Contact me</h2>
-  <section class={classes.container}>
-    <a class={classes.squareButtons} href="mailto:x@jesusbossa.dev" target="_blank">Email me</a>
-    <a
-      class={classes.squareButtons}
-      href="https://docs.google.com/document/d/1OGHl-zTllmxzfH1SG7ZDS0K1y20iFMxi_KfkyzZfIhI/edit?usp=sharing"
-      target="_blank">Resume</a
-    >
-    <a
-      class={classes.squareButtons}
-      href="https://docs.google.com/document/d/1iNSFmj9ojlC4Jq5I-Lq1IOOmLxclbI6u5cEhmPNMgd4/edit?usp=sharing"
-      target="_blank">Curriculum</a
-    >
-  </section>
-  <section class={cn(classes.container, 'mt-10')}>
-    <a class={classes.linearButtons} href="https://github.com/makinox" target="_blank">
-      <Icon className={classes.icon} icon={IconCatalog.github} aria-label="Github" />
-    </a>
-    <a class={classes.linearButtons} href="https://www.instagram.com/jesusbossa.dev" target="_blank">
-      <Icon className={classes.icon} icon={IconCatalog.instagram} aria-label="Instagram" />
-    </a>
-    <a class={classes.linearButtons} href="https://www.linkedin.com/in/jesusbossa" target="_blank">
-      <Icon className={classes.icon} icon={IconCatalog.linkedin} aria-label="Linkedin" />
-    </a>
-    <a class={classes.linearButtons} href="https://twitter.com/jesusbossa_dev" target="_blank">
-      <Icon className={classes.icon} icon={IconCatalog.twitter} aria-label="Twitter" />
-    </a>
-  </section>
+<section class={cn(globalClasses.container, "mt-40")} id="contact">
+    <h2 class={cn(globalClasses.blackGradient, "text-4xl font-bold mb-10")}>
+        Contact me
+    </h2>
+    <section class={classes.container}>
+        <a
+            class={classes.squareButtons}
+            href="mailto:x@jesusbossa.dev"
+            target="_blank"
+        >
+            Email me
+        </a>
+        <a
+            class={classes.squareButtons}
+            href="https://docs.google.com/document/d/1p0LJ8uH9w80XABatGm-KpKbORho_MCqEZ_AYOPf-D_4/edit?usp=sharing"
+            target="_blank"
+        >
+            Resume
+        </a>
+        <a
+            class={classes.squareButtons}
+            href="https://docs.google.com/document/d/1iNSFmj9ojlC4Jq5I-Lq1IOOmLxclbI6u5cEhmPNMgd4/edit?usp=sharing"
+            target="_blank"
+        >
+            Curriculum
+        </a>
+    </section>
+    <section class={cn(classes.container, "mt-10")}>
+        <a
+            class={classes.linearButtons}
+            href="https://github.com/makinox"
+            target="_blank"
+        >
+            <Icon
+                className={classes.icon}
+                icon={IconCatalog.github}
+                aria-label="Github"
+            />
+        </a>
+        <a
+            class={classes.linearButtons}
+            href="https://www.instagram.com/jesusbossa.dev"
+            target="_blank"
+        >
+            <Icon
+                className={classes.icon}
+                icon={IconCatalog.instagram}
+                aria-label="Instagram"
+            />
+        </a>
+        <a
+            class={classes.linearButtons}
+            href="https://www.linkedin.com/in/jesusbossa"
+            target="_blank"
+        >
+            <Icon
+                className={classes.icon}
+                icon={IconCatalog.linkedin}
+                aria-label="Linkedin"
+            />
+        </a>
+        <a
+            class={classes.linearButtons}
+            href="https://twitter.com/jesusbossa_dev"
+            target="_blank"
+        >
+            <Icon
+                className={classes.icon}
+                icon={IconCatalog.twitter}
+                aria-label="Twitter"
+            />
+        </a>
+    </section>
 </section>
